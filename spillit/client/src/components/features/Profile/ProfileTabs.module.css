@@ -1,0 +1,33 @@
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: var(--navbar-h);
+  background: var(--bg);
+  z-index: 10;
+}
+
+.tab {
+  flex: 1;
+  padding: var(--sp-3) var(--sp-4);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition);
+}
+.tab:hover { color: var(--text-secondary); }
+.active    { color: var(--text-primary) !important; }
+
+.indicator {
+  position: absolute;
+  bottom: -1px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--purple));
+  border-radius: var(--r-pill);
+}

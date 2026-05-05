@@ -1,0 +1,103 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding-top: var(--sp-2);
+}
+
+.section { display: flex; flex-direction: column; gap: var(--sp-3); }
+
+.heading {
+  font-size: 14px;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.skeletons { display: flex; flex-direction: column; gap: var(--sp-2); }
+
+.empty {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Tags */
+.tags { display: flex; flex-direction: column; gap: 4px; }
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 7px 10px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-align: left;
+}
+.tag:hover {
+  border-color: rgba(255,60,172,0.3);
+  background: var(--card-hover);
+}
+
+.tagRank {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  font-weight: 600;
+  min-width: 24px;
+}
+
+.tagName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tagCount {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+}
+
+/* Hot posts */
+.hotPosts { display: flex; flex-direction: column; gap: var(--sp-2); }
+
+.hotPost {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: border-color var(--transition);
+  cursor: default;
+}
+.hotPost:hover { border-color: var(--border-hover); }
+
+.tempBadge { align-self: flex-start; }
+
+.hotContent {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.hotMeta {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.divider { height: 1px; background: var(--border); }
+
+.footer {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  padding-top: var(--sp-2);
+}

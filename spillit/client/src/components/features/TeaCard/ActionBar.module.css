@@ -1,0 +1,45 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border);
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  transition: all var(--transition);
+  border: 1px solid transparent;
+}
+
+.action:hover {
+  background: var(--card-hover);
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+.liked {
+  color: var(--accent) !important;
+  background: var(--accent-dim) !important;
+  border-color: rgba(255, 60, 172, 0.25) !important;
+}
+
+.playing {
+  color: var(--mint) !important;
+  background: var(--mint-dim) !important;
+  border-color: rgba(0, 245, 160, 0.25) !important;
+}
+
+.commentOpen {
+  color: var(--blue) !important;
+  background: var(--blue-dim) !important;
+  border-color: rgba(43, 134, 197, 0.3) !important;
+}

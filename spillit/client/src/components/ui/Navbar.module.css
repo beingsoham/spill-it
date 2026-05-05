@@ -1,0 +1,94 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--navbar-h);
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+  background: rgba(13, 13, 20, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.inner {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--sp-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.logo {
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+
+.pageTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  /* Don't use position:absolute — causes overlap on small screens */
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 var(--sp-2);
+}
+
+/* Hide page title on desktop — logo is enough */
+@media (min-width: 769px) {
+  .pageTitle { display: none; }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-shrink: 0;
+}
+
+.spillNavBtn {
+  font-size: 13px;
+  padding: 7px 14px;
+}
+
+.navAvatar {
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+  border: 1.5px solid rgba(255, 60, 172, 0.4);
+  transition: border-color var(--transition);
+  flex-shrink: 0;
+}
+.navAvatar:hover { border-color: var(--accent); }
+
+.notifDot {
+  position: absolute;
+  top: 6px; right: 6px;
+  width: 7px; height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 1.5px solid var(--bg);
+  animation: pulse-dot 2s infinite;
+}
+
+/* Mobile nav adjustments */
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 var(--sp-3);
+    gap: var(--sp-2);
+  }
+
+  .logo { font-size: 17px; }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .logo { font-size: 15px; }
+
+  .actions { gap: var(--sp-1); }
+}

@@ -1,0 +1,59 @@
+.page { min-height: 60vh; }
+
+/* Loading skeletons */
+.loadingBanner {
+  height: 110px;
+  background: var(--card);
+}
+
+.loadingAvatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  margin: -36px 0 0 var(--sp-5);
+  background: linear-gradient(90deg, var(--card) 25%, var(--card-hover) 50%, var(--card) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.loadingLines {
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+/* Not found */
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  padding: var(--sp-10) var(--sp-4);
+  color: var(--text-muted);
+  font-size: 15px;
+  min-height: 50vh;
+  text-align: center;
+}
+
+/* Content */
+.content { padding: var(--sp-3) var(--sp-4); }
+
+/* Empty state */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-10) var(--sp-4);
+  gap: var(--sp-3);
+  color: var(--text-muted);
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .content { padding: var(--sp-3); }
+  .loadingLines { padding: var(--sp-3) var(--sp-4); }
+}

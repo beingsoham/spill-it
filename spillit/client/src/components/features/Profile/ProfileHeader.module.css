@@ -1,0 +1,191 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Banner ── */
+.banner {
+  height: 110px;
+  background: linear-gradient(135deg, #FF3CAC22, #784BA033, #2B86C522);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(255,60,172,0.2), transparent),
+    radial-gradient(ellipse 60% 80% at 80% 40%, rgba(43,134,197,0.15), transparent);
+  flex-shrink: 0;
+}
+
+/* ── Avatar row ── */
+.avatarRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 var(--sp-5) var(--sp-3);
+  margin-top: -36px;
+}
+
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  border: 3px solid var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: white;
+  object-fit: cover;
+}
+
+.streakRing {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box,
+              linear-gradient(135deg, var(--accent), var(--amber)) border-box;
+  pointer-events: none;
+}
+
+/* ── Action ── */
+.editBtn, .followBtn {
+  font-size: 13px;
+  padding: 7px 16px;
+}
+
+.unfollowBtn {
+  background: var(--card-hover);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  padding: 7px 16px;
+  border-radius: var(--r-md);
+  transition: all var(--transition);
+}
+.unfollowBtn:hover {
+  border-color: rgba(255,60,172,0.3);
+  color: var(--accent);
+}
+
+/* ── Identity ── */
+.identity {
+  padding: var(--sp-3) var(--sp-5) var(--sp-1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-size: 22px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.nameInput {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--text-primary);
+  background: var(--card-hover);
+  border: 1px solid var(--border-focus);
+  border-radius: var(--r-md);
+  padding: var(--sp-2) var(--sp-3);
+  width: 100%;
+  max-width: 280px;
+}
+.nameInput:focus { outline: none; }
+
+.verified {
+  width: 20px; height: 20px;
+  background: var(--blue);
+  border-radius: 50%;
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  flex-shrink: 0;
+}
+
+.username {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── Bio ── */
+.bioWrap {
+  padding: var(--sp-2) var(--sp-5) var(--sp-3);
+}
+
+.bio {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.bioEmpty {
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+.bioEmpty:hover { color: var(--accent); }
+
+.bioInput {
+  width: 100%;
+  background: var(--card-hover);
+  border: 1px solid var(--border-focus);
+  border-radius: var(--r-md);
+  padding: var(--sp-2) var(--sp-3);
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+  resize: none;
+  font-family: 'DM Sans', sans-serif;
+}
+.bioInput:focus { outline: none; }
+
+.saveBtn {
+  margin-top: var(--sp-3);
+  font-size: 13px;
+  padding: 7px 20px;
+}
+
+/* ── Streak badge ── */
+.streakBadge {
+  margin: 0 var(--sp-5) var(--sp-3);
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  border: 1px solid;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Stats ── */
+.stats {
+  display: flex;
+  align-items: stretch;
+  padding: var(--sp-2) var(--sp-3);
+  border-top: 1px solid var(--border);
+}
+
+.statDivider {
+  width: 1px;
+  background: var(--border);
+  margin: var(--sp-2) 0;
+}

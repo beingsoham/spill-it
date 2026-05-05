@@ -1,0 +1,66 @@
+.page { animation: fadeUp 200ms ease both; }
+
+.filters {
+  display: flex;
+  gap: var(--sp-2);
+  padding: var(--sp-4) var(--sp-4) var(--sp-3);
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: var(--navbar-h);
+  background: var(--bg);
+  z-index: 10;
+  border-bottom: 1px solid var(--border);
+}
+.filters::-webkit-scrollbar { display: none; }
+
+.feed { padding: var(--sp-4); }
+
+.newTeaBanner {
+  position: sticky;
+  top: calc(var(--navbar-h) + 48px);
+  z-index: 9;
+  margin: 0 var(--sp-4) calc(-1 * var(--sp-2));
+  padding: var(--sp-2) var(--sp-4);
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--r-pill);
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-accent);
+  animation: fadeUp 200ms ease both;
+}
+
+/* Skeleton */
+.skeleton {
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  margin-bottom: var(--sp-3);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+.skAvatar { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; }
+.skLines  { flex: 1; display: flex; flex-direction: column; gap: var(--sp-2); padding-top: 4px; }
+.skLine   { height: 13px; border-radius: var(--r-sm); }
+
+.endMsg {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: var(--sp-6);
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-10);
+  color: var(--text-muted);
+  gap: var(--sp-2);
+  text-align: center;
+}

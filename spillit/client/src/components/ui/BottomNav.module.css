@@ -1,0 +1,57 @@
+.nav {
+  /* Hidden on desktop — shown only on mobile */
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: var(--bottomnav-h);
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 var(--sp-2);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  border-top: 1px solid var(--border);
+  z-index: 100;
+  background: rgba(13, 13, 20, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@media (max-width: 768px) {
+  .nav { display: flex; }
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: var(--sp-2) 0;
+  color: var(--text-muted);
+  transition: color var(--transition);
+  min-width: 0;
+}
+.item.active { color: var(--accent); }
+
+.label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.postBtn {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-accent);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.postBtn:active {
+  transform: scale(0.94);
+  box-shadow: none;
+}

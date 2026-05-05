@@ -1,0 +1,127 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-4);
+  background: var(--bg);
+  background-image: radial-gradient(
+    ellipse 60% 40% at 50% 60%,
+    rgba(120, 75, 160, 0.12),
+    transparent
+  );
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--sp-8);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: var(--shadow-modal);
+  animation: fadeUp 300ms ease both;
+}
+
+.logo {
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--sp-2);
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: var(--sp-6);
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  text-align: left;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.input {
+  background: var(--card-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: border-color var(--transition);
+  /* Prevent zoom on iOS when font-size < 16px */
+  font-size: max(16px, 14px);
+}
+.input:focus {
+  border-color: var(--border-focus);
+  outline: none;
+}
+.input::placeholder { color: var(--text-muted); }
+
+.error {
+  font-size: 13px;
+  color: var(--temp-hot);
+  background: var(--accent-dim);
+  padding: var(--sp-3);
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 60, 172, 0.2);
+  text-align: left;
+}
+
+.submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  margin-top: var(--sp-2);
+}
+
+.switchText {
+  margin-top: var(--sp-5);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.switchLink {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 13px;
+  transition: opacity var(--transition);
+}
+.switchLink:hover { opacity: 0.8; }
+
+.switchBtn {
+  margin-top: var(--sp-4);
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .card {
+    padding: var(--sp-5);
+    border-radius: var(--r-lg);
+  }
+
+  .logo { font-size: 28px; }
+
+  .sub { margin-bottom: var(--sp-4); }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .card { padding: var(--sp-4); }
+}

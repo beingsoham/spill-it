@@ -1,0 +1,28 @@
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  padding: var(--sp-3) var(--sp-2);
+  border-radius: var(--r-md);
+  transition: background var(--transition);
+  cursor: default;
+}
+.stat:hover { background: var(--card-hover); }
+
+.value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+}
