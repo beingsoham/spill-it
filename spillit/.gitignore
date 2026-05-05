@@ -1,9 +1,16 @@
 # Dependencies
-node_modules/
+node_modules
+client/node_modules
+server/node_modules
+
+# Env files — NEVER commit these
+.env
+client/.env
+server/.env
+*.env.local
 
 # Build output
-/dist/
-/dist-ssr/
+client/dist
 
 # Logs
 logs/
@@ -15,7 +22,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Env files (keep examples)
-.env
 .env.*
 !.env.example
 
